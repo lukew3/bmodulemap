@@ -3,11 +3,15 @@ const util = require('util');
 const graphviz = require('graphviz');
 const path = require('path');
 
-const moduleMap = () => {
+const moduleMap = (file) => {
   // Create digraph G
   let g = graphviz.digraph("G");
-  let startPath = '/home/luke/congol/client/js';
-  let startFile = 'main.js';
+  if (!fs.existsSync(file)) {
+    console.log(`Error: File ${file} does not exist`);
+    return;
+  }
+  let startPath = path.dirname(file);
+  let startFile = path.basename(file);
 
   // items of modules are '<filename>': <diagram-node-object>
   let modules = {};
@@ -20,6 +24,7 @@ const moduleMap = () => {
   	let parentPath = path.dirname(parentFilename);
   	if (parentPath === '.')
   		return childFilename.substring(2);
+    // this should probably be recursive
   	if (childFilename.substring(0, 3) === '../') {
   		let parentPath2 = path.dirname(parentPath);
   		if (parentPath2 == '.') return childFilename.substring(3);

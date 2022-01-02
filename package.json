@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A tool for creating a flowchart that visualizes the flow of module imports in a browserify js app.",
   "main": "index.js",
+  "bin": {
+    "modulemap": "./bin/modulemap"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,6 +21,8 @@
   "homepage": "https://github.com/lukew3/modulemap#readme",
   "dependencies": {
     "graphviz": "0.0.9",
-    "path": "^0.12.7"
+    "os": "^0.1.2",
+    "path": "^0.12.7",
+    "yargs": "^17.3.1"
   }
 }

@@ -11,5 +11,24 @@ To run this, you need to first have graphviz on your computer. [Install graphviz
 Then, install modulemap
 `npm i -g modulemap`
 
+### Dev Setup
+Clone the repo, and enter it. Install requirements with
+```
+npm ci
+```
+You can test the app by running
+```
+node index.js
+```
+or by installing it and running it by running
+```
+npm i -g ../modulemap
+modulemap
+```
+
 ## Usage
 
+After installing, you can run modulemap from the terminal by running
+```
+modulemap
+```
