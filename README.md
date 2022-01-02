@@ -28,7 +28,7 @@ bmodulemap
 
 ## Usage
 
-After installing, you can run modulemap from the terminal by running
+After installing, you can run bmodulemap from the terminal by running
 ```
 bmodulemap
 ```
