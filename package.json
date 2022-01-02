@@ -1,24 +1,24 @@
 {
-  "name": "modulemap",
+  "name": "modulemap-browserify",
   "version": "1.0.0",
   "description": "A tool for creating a flowchart that visualizes the flow of module imports in a browserify js app.",
   "main": "index.js",
   "bin": {
-    "modulemap": "./bin/modulemap"
+    "modulemap": "./bin/modulemap-browserify"
   },
   "scripts": {
     "test": ""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lukew3/modulemap.git"
+    "url": "git+https://github.com/lukew3/modulemap-browserify.git"
   },
   "author": "Luke Weiler",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lukew3/modulemap/issues"
+    "url": "https://github.com/lukew3/modulemap-browserify/issues"
   },
-  "homepage": "https://github.com/lukew3/modulemap#readme",
+  "homepage": "https://github.com/lukew3/modulemap-browserify#readme",
   "dependencies": {
     "graphviz": "0.0.9",
     "os": "^0.1.2",
