@@ -1,10 +1,15 @@
 # modulemap
 Map local module requirements for your browserify js applications.
 
-[original idea](https://ideaspot.org/idea/61d1dcb050aa18fdcb755000)
+Arrows point from the file requesting another module to the module that it is requesting.
+
+[original idea concept](https://ideaspot.org/idea/61d1dcb050aa18fdcb755000)
 
 ## Setup
-Install graphviz on your computer. [Guide here](http://www.graphviz.org/download/)
+To run this, you need to first have graphviz on your computer. [Install graphviz](http://www.graphviz.org/download/)
 
+Then, install modulemap
 `npm i -g modulemap`
+
+## Usage
 

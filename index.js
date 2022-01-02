@@ -16,14 +16,15 @@ modules[startFile] = g.addNode(startFile);
 
 
 const correctFilename = (parentFilename, childFilename) => {
-	// this assumes that the require begins with './'
-	console.log(parentFilename);
-	console.log(childFilename);
-	if (path.dirname(parentFilename) === '.')
+	let parentPath = path.dirname(parentFilename);
+	if (parentPath === '.')
 		return childFilename.substring(2);
-	if (childFilename.substring(0, 3) === '../')
-		return path.dirname(path.dirname(parentFilename)) + childFilename.substring(2);
-	return path.dirname(parentFilename) + childFilename.substring(1);
+	if (childFilename.substring(0, 3) === '../') {
+		let parentPath2 = path.dirname(parentPath);
+		if (parentPath2 == '.') return childFilename.substring(3);
+		return parentPath2 + childFilename.substring(2);
+	}
+	return parentPath + childFilename.substring(1);
 };
 
 const handleRequire = (parentFilename, childFilename) => {
@@ -53,16 +54,9 @@ const readModule = (filename) => {
 		console.log(path);
 		handleRequire(filename, path);
 	});
-	/*
-	fs.readFile(startPath + '/' + filename, 'utf8', (err, data) => {
-		console.log(data);
-		// get names of requires
-			// handle require (parentFilename, childFilename)
-	});
-	*/
 };
 
-// start parsing 
+// start parsing
 readModule(startFile);
 
 // Print .dot file
