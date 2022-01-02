@@ -4,7 +4,7 @@
   "description": "A tool for creating a flowchart that visualizes the flow of module imports in a browserify js app.",
   "main": "index.js",
   "bin": {
-    "modulemap": "./bin/modulemap-browserify"
+    "modulemap-browserify": "./bin/modulemap-browserify"
   },
   "scripts": {
     "test": ""
