@@ -1,0 +1,23 @@
+{
+  "name": "modulemap",
+  "version": "1.0.0",
+  "description": "A tool for creating a flowchart that visualizes the flow of module imports in a browserify js app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukew3/modulemap.git"
+  },
+  "author": "Luke Weiler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukew3/modulemap/issues"
+  },
+  "homepage": "https://github.com/lukew3/modulemap#readme",
+  "dependencies": {
+    "graphviz": "0.0.9",
+    "path": "^0.12.7"
+  }
+}
