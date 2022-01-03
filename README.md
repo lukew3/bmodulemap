@@ -6,7 +6,7 @@ Arrows point from the file requesting another module to the module that it is re
 [original idea concept](https://ideaspot.org/idea/61d1dcb050aa18fdcb755000)
 
 ## Setup
-To run this, you need to first have graphviz on your computer. [Install graphviz](http://www.graphviz.org/download/)
+To use bmodulemap, you need to have graphviz installed on your computer. [Install graphviz](http://www.graphviz.org/download/)
 
 Then, install bmodulemap
 ```
