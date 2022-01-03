@@ -3,13 +3,18 @@ const util = require('util');
 const graphviz = require('graphviz');
 const path = require('path');
 
-const moduleMap = (file) => {
-  // Create digraph G
-  let g = graphviz.digraph("G");
+const moduleMap = (file, outfile) => {
   if (!fs.existsSync(file)) {
     console.log(`Error: File ${file} does not exist`);
     return;
   }
+  let outExt = outfile.split('.')[1];
+  if (!['svg', 'png', 'pdf', 'jpg', 'jpeg'].includes(outExt)) {
+    console.log('Invalid outfile type');
+    return;
+  }
+  // Create digraph G
+  let g = graphviz.digraph("G");
   let startPath = path.dirname(file);
   let startFile = path.basename(file);
 
@@ -67,8 +72,8 @@ const moduleMap = (file) => {
   console.log( g.to_dot() );
   // Set GraphViz path (if not in your path)
   g.setGraphVizPath( "/usr/bin" );
-  // Generate a PNG output
-  g.output( "svg", "output.svg" );
+
+  g.output(outExt, outfile);
 };
 
 module.exports = {

@@ -1,7 +1,7 @@
 {
   "name": "bmodulemap",
-  "version": "1.0.0",
-  "description": "A tool for creating a flowchart that visualizes the flow of module imports in a browserify js app.",
+  "version": "1.0.1",
+  "description": "Create a visual representation of local module requirements for your browserify js applications..",
   "main": "index.js",
   "bin": {
     "bmodulemap": "./bin/bmodulemap"

@@ -13,10 +13,16 @@ const cli = () => {
 	const argv = require('yargs')
 		.usage('Usage: $0 [FILE]')
 		.help('h')
+    .alias('h', 'help')
+    .alias('o', 'outfile')
+    .describe('o', 'Set file that you want to save to. Defaults to "outfile.svg"')
 		.argv;
 
 	if (argv._[0]) {
-		moduleMap(getAbsolutePath(argv._[0]));
+		moduleMap(
+      getAbsolutePath(argv._[0]),
+      argv.o || 'output.svg'
+    );
 	} else {
 		// could show help screen here instead of just telling them that the file was not specified
 		console.log("File not specified");
