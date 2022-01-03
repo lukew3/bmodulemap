@@ -3,7 +3,9 @@ Create a visual representation of local module requirements for your browserify 
 
 Arrows point from the file requesting another module to the module that it is requesting.
 
-[original idea concept](https://ideaspot.org/idea/61d1dcb050aa18fdcb755000)
+## Example 
+The following map was created from https://github.com/lukew3/congol/blob/main/client/js/main.js
+![output](https://user-images.githubusercontent.com/47042841/147898241-dbd84095-0372-4b38-940a-92d1f6e84c60.png)
 
 ## Setup
 To use bmodulemap, you need to have graphviz installed on your computer. [Install graphviz](http://www.graphviz.org/download/)
