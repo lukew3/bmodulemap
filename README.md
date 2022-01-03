@@ -9,7 +9,9 @@ Arrows point from the file requesting another module to the module that it is re
 To run this, you need to first have graphviz on your computer. [Install graphviz](http://www.graphviz.org/download/)
 
 Then, install bmodulemap
-`npm i -g bmodulemap`
+```
+npm i -g bmodulemap
+```
 
 ### Dev Setup
 Clone the repo, and enter it. Install requirements with
