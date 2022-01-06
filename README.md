@@ -14,6 +14,16 @@ Then, install bmodulemap
 ```
 npm i -g bmodulemap
 ```
+## Usage
+
+After installing, you can run bmodulemap from the terminal by running
+```
+bmodulemap <filename>
+```
+You can get additional information on usage by running 
+```
+bmodulemap -h
+```
 
 ### Dev Setup
 Clone the repo, and enter it. Install requirements with
@@ -27,12 +37,5 @@ node index.js
 or by installing it and running it by running
 ```
 npm i -g ../bmodulemap
-bmodulemap
-```
-
-## Usage
-
-After installing, you can run bmodulemap from the terminal by running
-```
 bmodulemap
 ```
